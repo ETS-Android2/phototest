@@ -1,0 +1,79 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3  Copyright 2015 The Android Open Source Project
+4
+5  Licensed under the Apache License, Version 2.0 (the "License");
+6  you may not use this file except in compliance with the License.
+7  You may obtain a copy of the License at
+8
+9      http://www.apache.org/licenses/LICENSE-2.0
+10
+11  Unless required by applicable law or agreed to in writing, software
+12  distributed under the License is distributed on an "AS IS" BASIS,
+13  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14  See the License for the specific language governing permissions and
+15  limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.basicpermissions" >
+19
+20    <uses-sdk
+21        android:minSdkVersion="15"
+21-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml
+22        android:targetSdkVersion="30" />
+22-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml
+23
+24    <!-- BEGIN_INCLUDE(manifest) -->
+25
+26
+27    <!--
+28     Note that all required permissions are declared here in the Android manifest.
+29     On Android M and above, use of these permissions is only requested at run time.
+30    -->
+31    <uses-permission android:name="android.permission.CAMERA" />
+31-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:24:5-64
+31-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:24:22-62
+32
+33    <!-- END_INCLUDE(manifest) -->
+34    <application
+34-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:27:5-46:19
+35        android:allowBackup="true"
+35-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:28:13-39
+36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+36-->[androidx.core:core:1.2.0] C:\Users\kzayk\.gradle\caches\transforms-2\files-2.1\4f3d7d743df13c1af889a0942a35670d\core-1.2.0\AndroidManifest.xml:24:18-86
+37        android:debuggable="true"
+38        android:icon="@mipmap/ic_launcher"
+38-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:29:13-47
+39        android:label="@string/app_name"
+39-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:30:13-45
+40        android:testOnly="true"
+41        android:theme="@style/Theme.AppCompat.Light" >
+41-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:31:13-57
+42        <activity
+42-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:32:9-39:20
+43            android:name="com.example.android.basicpermissions.MainActivity"
+43-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:33:17-45
+44            android:label="@string/app_name" >
+44-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:34:17-49
+45            <intent-filter>
+45-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:35:13-38:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:36:17-68
+46-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:36:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:37:17-76
+48-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:37:27-74
+49            </intent-filter>
+50        </activity>
+51
+52        <!-- Activity that only displays the camera preview. -->
+53        <activity
+53-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:42:9-44:43
+54            android:name="com.example.android.basicpermissions.camera.CameraPreviewActivity"
+54-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:43:17-61
+55            android:exported="false" />
+55-->C:\OneDrive\code\android\permissions-samples\RuntimePermissionsBasic\Application\src\main\AndroidManifest.xml:44:17-41
+56    </application>
+57
+58</manifest>
