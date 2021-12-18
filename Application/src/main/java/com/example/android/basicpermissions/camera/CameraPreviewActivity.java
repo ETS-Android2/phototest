@@ -67,7 +67,7 @@ public class CameraPreviewActivity extends Activity {
 
             // Get the rotation of the screen to adjust the preview image accordingly.
             int displayRotation = getDisplay().getRotation();
-
+            mCamera.setPreviewCallback(mPreview);
             // Create the Preview view and set it as the content of this Activity.
             CameraPreview cameraPreview = new CameraPreview(this, null,
                     0, mCamera, cameraInfo, displayRotation);
@@ -116,6 +116,16 @@ public class CameraPreviewActivity extends Activity {
             mCamera = null;
         }
     }
+    private final Camera.PreviewCallback mPreview = new Camera.PreviewCallback() {
+
+        @Override
+        public void onPreviewFrame(byte[] data, Camera camera) {
+            Snackbar.make(mLayout, "Captured "+String.valueOf(data.length)+" bytes",
+                    10)
+                    .show();
+        }
+    };
+
     private final Camera.PictureCallback mPicture = new Camera.PictureCallback() {
 
         @Override
